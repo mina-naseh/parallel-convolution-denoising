@@ -105,4 +105,5 @@ plt.title("Denoised Image")
 plt.axis('off')
 
 plt.tight_layout()
-plt.show()
+# plt.show()
+plt.savefig("output.png")
