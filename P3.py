@@ -21,7 +21,6 @@ for _ in range(num_corrupted_pixels):
 y_true = y_true.astype(np.float32) / 255.0
 x = x.astype(np.float32) / 255.0
 
-
 # Define convolution function using JAX
 def convolution_2d(x, kernel):
     input_height, input_width = x.shape
