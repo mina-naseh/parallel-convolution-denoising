@@ -1,3 +1,5 @@
+# https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+
 import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.keras.datasets import mnist
@@ -6,7 +8,8 @@ import jax.numpy as jnp
 from jax import grad
 
 # Load the MNIST dataset
-(x_train, y_train), (x_test, y_test) = mnist.load_data()
+local_dataset_path = "./mnist.npz" 
+(x_train, y_train), (x_test, y_test) = mnist.load_data(path=local_dataset_path)
 
 x = x_train[0]
 y_true = x.copy()
@@ -105,4 +108,4 @@ plt.axis('off')
 
 plt.tight_layout()
 # plt.show()
-plt.savefig("P3_output.png")
+plt.savefig("P3_hpc_output.png")
