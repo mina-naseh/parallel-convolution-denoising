@@ -1,4 +1,4 @@
-# https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+# wget  https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -8,8 +8,8 @@ import jax.numpy as jnp
 from jax import grad
 
 # Load the MNIST dataset
-local_dataset_path = "./mnist.npz" 
-(x_train, y_train), (x_test, y_test) = mnist.load_data(path=local_dataset_path)
+local_dataset_path = "./" 
+(x_train, y_train), (x_test, y_test) = mnist.load_data(cache_dir=local_dataset_path)
 
 x = x_train[0]
 y_true = x.copy()
